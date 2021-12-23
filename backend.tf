@@ -1,3 +1,4 @@
+/*
 terraform {
   backend "s3" {
     bucket = "my-terraform-assignment-state-bucket"
@@ -7,4 +8,4 @@ terraform {
     encrypt = true
   }
 }
-
+*/

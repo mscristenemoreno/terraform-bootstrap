@@ -1,3 +1,25 @@
+terraform {
+  required_version = "~> 1.1.0"
+
+  backend "s3" {}
+}
+
+provider "aws" {
+  version = "~> 3.0"
+  region = var.aws_region
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+}
+
+# VARIABLES
+
+variable "aws_access_key" {}
+variable "aws_secret_key" {}
+
+variable "aws_region" {
+  default = "ap-southeast-1"
+}
+
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "my-terraform-assignment-state-bucket"
   acl    = "private"
