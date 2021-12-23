@@ -1,9 +1,3 @@
-terraform {
-  required_version = "~> 1.1.0"
-
-  backend "s3" {}
-}
-
 provider "aws" {
   version = "~> 3.0"
   region = var.aws_region
