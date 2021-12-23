@@ -37,8 +37,9 @@ jobs:
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       env:
-         AWS_ACCESS: ${{ secrets.AWS_ACCESS_KEY_ID }}
-         AWS_SECRET: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: | terraform plan -var-file=".\dev\dev.auto.tfvars" -var="aws_secret_key=$AWS_SECRET" -var="aws_access_key=$AWS_ACCESS"
+        AWS_ACCESS: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        terraform plan -var-file=".\dev\dev.auto.tfvars" -var="aws_secret_key=$AWS_SECRET" -var="aws_access_key=$AWS_ACCESS"
 
 
