@@ -43,4 +43,3 @@ jobs:
         terraform plan -var-file=dev/dev.auto.tfvars -var="aws_secret_key=$AWS_SECRET" -var="aws_access_key=$AWS_ACCESS"
 
 
-
