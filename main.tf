@@ -1,6 +1,6 @@
 provider "aws" {
-  version = "~> 3.0"
-  region = var.aws_region
+  version    = "~> 3.0"
+  region     = var.aws_region
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
 }
@@ -36,8 +36,8 @@ resource "aws_s3_bucket" "terraform_state" {
 }
 
 resource "aws_dynamodb_table" "terraform_locks" {
-  hash_key = "LockID"
-  name     = "terraform-state-locking"
+  hash_key     = "LockID"
+  name         = "terraform-state-locking"
   billing_mode = "PAY_PER_REQUEST"
   attribute {
     name = "LockID"
