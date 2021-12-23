@@ -8,7 +8,7 @@ on:
 
 jobs:
   terraform:
-    name: 'Terraform-Bootstrap'
+    name: 'TFBootstrap'
     runs-on: ubuntu-latest
     environment: production
 
